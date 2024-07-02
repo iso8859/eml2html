@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System.IO;
 using MimeKit;
+using Org.BouncyCastle.Tls;
 
 public class eml2html
 {
@@ -29,11 +30,30 @@ public class eml2html
         return buffer.ToString();
     }
 
+    static string ConvertTextToHTML(string txt)
+    {
+        StringReader sr = new StringReader(txt);
+        string result;
+        using (StringWriter sw = new StringWriter())
+        {
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                sw.Write(_formatHtmlTag(line));
+                sw.WriteLine("<br>");
+            }
+            result = sw.ToString();
+        }
+        return result;
+    }
+
     static public void Convert(Stream eml, Stream htmlOut)
     {
         MimeMessage mail = MimeMessage.Load(eml);
 
         string html = mail.HtmlBody;
+        if (html == null)
+            html = ConvertTextToHTML(mail.TextBody);
         StringBuilder header = new StringBuilder();
 
         header.Append("<font face=\"Courier New,Arial\" size=2>");
@@ -46,13 +66,15 @@ public class eml2html
         header.Append(string.Format("<b>Subject:</b>{0}<br>\r\n", _formatHtmlTag(mail.Subject)));
 
         // Change original meta header encoding to utf-8
-        Regex reg = new Regex("(<meta[^>]*charset[ \t]*=[ \t\"]*)([^<> \r\n\"]*)", RegexOptions.Multiline | RegexOptions.IgnoreCase);
-        html = reg.Replace(html, "$1utf-8");
-        if (!reg.IsMatch(html))
+        if (!string.IsNullOrEmpty(html))
         {
-            header.Insert(0, "<meta HTTP-EQUIV=\"Content-Type\" Content=\"text/html; charset=utf-8\">");
+            Regex reg = new Regex("(<meta[^>]*charset[ \t]*=[ \t\"]*)([^<> \r\n\"]*)", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+            html = reg.Replace(html, "$1utf-8");
+            if (!reg.IsMatch(html))
+            {
+                header.Insert(0, "<meta HTTP-EQUIV=\"Content-Type\" Content=\"text/html; charset=utf-8\">");
+            }
         }
-
         html = header.ToString() + "<hr>" + html;
         StreamWriter writer = new StreamWriter(htmlOut, Encoding.UTF8);
         writer.Write(html);
