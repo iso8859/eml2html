@@ -1,0 +1,68 @@
+Return-Path: <demo@demo.ukn>
+Delivered-To: demo@demo.ukn
+Received: from smtp-3-9002.mail.infomaniak.ch ([10.4.36.132])
+	by mda-3-0213.mail.infomaniak.ch with LMTP
+	id oBU0DMPWg2Zh6SIAuPkcNg
+	(envelope-from <demo@demo.ukn>)
+	for <demo@demo.ukn>; Tue, 02 Jul 2024 12:30:27 +0200
+Authentication-Results: mx.infomaniak.com; dmarc=pass (p=reject dis=none) header.from=ik.me
+Authentication-Results: mx.infomaniak.com;
+	dkim=pass (1024-bit key; secure) header.d=ik.me header.i=@ik.me header.a=rsa-sha256 header.s=20200325 header.b=D2GITBQC;
+	dkim-atps=neutral
+Received: from smtp-bc08.mail.infomaniak.ch (smtp-bc08.mail.infomaniak.ch [IPv6:2001:1600:4:17::bc08])
+	by smtp-3-9002.mail.infomaniak.ch (Postfix) with ESMTPS id 4WCzh263bfzkVS
+	for <demo@demo.ukn>; Tue,  2 Jul 2024 12:30:26 +0200 (CEST)
+Received: from smtp-3-0000.mail.infomaniak.ch (smtp-3-0000.mail.infomaniak.ch [10.4.36.107])
+	by smtp-3-3000.mail.infomaniak.ch (Postfix) with ESMTPS id 4WCzh25S7zzy4Z
+	for <demo@demo.ukn>; Tue,  2 Jul 2024 12:30:26 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ik.me; s=20200325;
+	t=1719916226; bh=F+dqJXk6nF+vtmoYhnEIwYB3OhjfHgWT+w+PW0c2s8I=;
+	h=Date:To:From:Subject:From;
+	b=D2GITBQC4wRHudRZIiJePD95T0qPZr/QxZG4FGJtK8qTMSxdDszWxSDyhoFKkIIa2
+	 FRWOUWDsrgjhVKu7f8A1zp+BjRCpqstc6ugegMwTUJvy0UVatR/qC2uiiAmean+GFw
+	 CtkB4qq8oWpVe0ExD2p1ZNK/U4EsMYTRmKLR3lAM=
+Received: from unknown by smtp-3-0000.mail.infomaniak.ch (Postfix) with ESMTPA id 4WCzh22DMDzpxC
+	for <demo@demo.ukn>; Tue,  2 Jul 2024 12:30:26 +0200 (CEST)
+Content-Type: multipart/alternative;
+ boundary="------------48uwJ0LMKPruOjy8D6Bi9h6k"
+Message-ID: <4099e59d-af29-4241-b600-8b9036234b6b@ik.me>
+Date: Tue, 2 Jul 2024 12:30:24 +0200
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+Content-Language: fr
+To: demo@demo.ukn
+From: "demo@demo.ukn" <demo@demo.ukn>
+Subject: Demo mail
+Feedback-ID: :2e76e1bd3086e32:ham:2e76e1bd3086e32
+X-Infomaniak-Routing: alpha
+Authentication-Results: mx.infomaniak.com; spf=pass smtp.mailfrom=ik.me
+X-Infomaniak-Type: ham
+X-Spam-Score: 5
+X-Spam-Detail: gggruggvucftvghtrhhoucdtuddrgeeftddrudehgddviecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfkpffhqffotefpkfetmfenuceurghilhhouhhtmecupfdsteenucgoteeftdduqddtudculdduhedmnefjrghmjfgvrgguvghrhfhivghlugcujfgvrgguvghrucfutghorhhinhhgucdlqddutddmnecujfgurheptgfkffggfgfvhffusegrtderredtvdejnecuhfhrohhmpedfrhgvmhhirdhthhhomhgrshesihhkrdhmvgdfuceorhgvmhhirdhthhhomhgrshesihhkrdhmvgeqnecuggftrfgrthhtvghrnhepheetteejhedvieethfettedvhfevvdduieehteefkedugefgfeekueelffekieffnecukfhppedvtddtudemudeitddtmeegmedujeemmegstgdtkeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepihhnvghtpedvtddtudemudeitddtmeegmedujeemmegstgdtkedphhgvlhhopehsmhhtphdqsggttdekrdhmrghilhdrihhnfhhomhgrnhhirghkrdgthhdpmhgrihhlfhhrohhmpehrvghmihdrthhhohhmrghssehikhdrmhgvpdhnsggprhgtphhtthhopedupdhrtghpthhtoheprhgvmhhirdhthhhomhgrshesihhkrdhmvgdpshhpfhepphgrshhspdgukhhimhepphgrshhs
+X-Infomaniak-Spam: ham
+X-Infomaniak-Cause: gAAAAABmg9bDYOv9DmIl_hIYQ8YCD8UzepG6BKDFVOhz8l6sjFe9tZFTfSoa_c2jS4DwvYkG_Bxo-Ncw9zDgYCdiKBRuuUPktWH9PjXyqFTHJzbB3DKbMimDYcT54KZE1IPGP5U8GMEnvg7eC-LZVZYXD7wqzJZ7O7onkNzBULHnrJS8S-q20Q5HHPeYU4MoBwspXwq42ovB3zNwBmTKajNeZp6iaGddrwfNg9p3pcuv6tI53SuqvkkotfAQz3JZ68rEGP9zKCOB
+
+This is a multi-part message in MIME format.
+--------------48uwJ0LMKPruOjy8D6Bi9h6k
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+This a demo_mail_
+
+--------------48uwJ0LMKPruOjy8D6Bi9h6k
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <p>This a demo<u> mail</u><br>
+    </p>
+  </body>
+</html>
+
+--------------48uwJ0LMKPruOjy8D6Bi9h6k--

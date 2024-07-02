@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eml2html", "eml2html\eml2html.csproj", "{BD02093A-4142-4D0E-B7CE-3F3D9DB81F8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demo", "demo\demo.csproj", "{CA9C0E70-424C-41EA-95FC-8AB38C127695}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD02093A-4142-4D0E-B7CE-3F3D9DB81F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD02093A-4142-4D0E-B7CE-3F3D9DB81F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD02093A-4142-4D0E-B7CE-3F3D9DB81F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD02093A-4142-4D0E-B7CE-3F3D9DB81F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA9C0E70-424C-41EA-95FC-8AB38C127695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA9C0E70-424C-41EA-95FC-8AB38C127695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA9C0E70-424C-41EA-95FC-8AB38C127695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA9C0E70-424C-41EA-95FC-8AB38C127695}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE508435-6AED-43F1-8F19-503F5D74C5AB}
+	EndGlobalSection
+EndGlobal
